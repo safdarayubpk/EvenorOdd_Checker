@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd</title>
+</head>
+<body>
+
+    <h1>Check number even or odd</h1>
+    
+    <form>
+        Number : <input id="num" type="number" placeholder="enter a number" required>
+        <br>
+        
+    </form>
+    <br>
+    
+    <button onclick="isEvenOrOdd(); return false" > Submit </button>
+    <br>
+    <br>
+    <h3>Result</h3> <p id="result"></p>
+    <script>
+
+        function isEvenOrOdd() {
+            let num = +document.querySelector("#num").value
+            if (num % 2 === 0) {
+                let result = "Even"
+                document.querySelector('#result').innerHTML = result
+            } else {
+                let result = "Odd"
+                document.querySelector('#result').innerHTML = result
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
