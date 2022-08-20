@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Even or Odd</title>
+    <title>Even Odd Checker</title>
+
+    <style>
+        body {
+          background-color: coral;
+          text-align: center;
+        }
+        </style>
 </head>
 <body>
+    <h1>Even Odd Checker</h1>
 
-    <h1>Check number even or odd</h1>
-    
     <form>
         Number : <input id="num" type="number" placeholder="enter a number" required>
         <br>
-        
+        <br>
     </form>
-    <br>
     
-    <button onclick="isEvenOrOdd(); return false" > Submit </button>
-    <br>
+    <button onclick="isEvenOdd(); return false">submit</button>
     <br>
     <h3>Result</h3> <p id="result"></p>
+    
     <script>
-
-        function isEvenOrOdd() {
+        function isEvenOdd() {
             let num = +document.querySelector("#num").value
+
             if (num % 2 === 0) {
                 let result = "Even"
-                document.querySelector('#result').innerHTML = result
+                document.querySelector("#result").innerHTML = result
             } else {
                 let result = "Odd"
-                document.querySelector('#result').innerHTML = result
+                document.querySelector("#result").innerHTML = result
             }
         }
-
-        
     </script>
 </body>
 </html>
